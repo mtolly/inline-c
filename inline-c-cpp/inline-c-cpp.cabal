@@ -41,7 +41,7 @@ common cxx-opts
   -- Linking to the C++ standard library
   if impl(ghc >= 9.4)
     build-depends: system-cxx-std-lib == 1.0
-  elif os(linux)
+  elif os(linux) || os(windows)
     extra-libraries: stdc++
   elif os(darwin)
     extra-libraries: c++
